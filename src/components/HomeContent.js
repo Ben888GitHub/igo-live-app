@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  Jumbotron,
-  Container,
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Button,
-  Card,
-  CardDeck,
-  Dropdown,
-} from "react-bootstrap";
-import Avatar from "@material-ui/core/Avatar";
+import { Container, Image, Row, Col, Button } from "react-bootstrap";
+
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -32,12 +21,9 @@ function HomeContent() {
           position: "relative",
           borderRadius: 15,
           boxShadow: "0.5px 1px 18px #888888",
-
-          // width: 550,
         }}
         src="https://igo-events.s3.amazonaws.com/igo-live/channels/jamie/Jamie-Nonis---Channel-Banner---WFH2.jpg"
         thumbnail
-        // rounded
       />
       <Container>
         <Row>
@@ -126,18 +112,6 @@ function HomeContent() {
               Videos
             </Button>{" "}
           </Link>
-          {/* <Button
-            variant="success"
-            style={{ borderStyle: "hidden", borderRadius: 20 }}
-          >
-            Playlists
-          </Button>{" "} */}
-          {/* <Button
-          variant="success"
-          style={{ borderStyle: "hidden", borderRadius: 20 }}
-        >
-          Socials
-        </Button>{" "} */}
           <br />
           <br />
           <Route exact path="/" component={Home} />

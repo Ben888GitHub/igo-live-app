@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Jumbotron,
-  Container,
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Button,
-  Card,
-  CardDeck,
-} from "react-bootstrap";
+import { Jumbotron, Image, Carousel } from "react-bootstrap";
 
 function Home() {
   return (
@@ -17,7 +7,6 @@ function Home() {
       style={{
         borderStyle: "hidden",
         borderRadius: 20,
-        // boxShadow: "0.5px 1px 7px #888888",
       }}
     >
       <Carousel.Item style={{ height: "480px" }} interval={1200}>
@@ -60,9 +49,6 @@ function Home() {
             have a fighting chance to rise above our current challenges and
             thrive!
           </p>
-          {/* <p>
-                <Button variant="primary">Learn more</Button>
-              </p> */}
         </Jumbotron>
       </Carousel.Item>
       <Carousel.Item style={{ height: "480px" }} interval={1200}>
@@ -120,9 +106,6 @@ function Home() {
             amazing job providing meals and treat packs for healthcare and
             migrant workers in Singapore.
           </p>
-          {/* <p>
-                <Button variant="primary">Learn more</Button>
-              </p> */}
         </Jumbotron>
       </Carousel.Item>
     </Carousel>

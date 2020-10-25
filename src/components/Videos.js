@@ -1,26 +1,12 @@
 import React, { useState } from "react";
-import {
-  Jumbotron,
-  Container,
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Button,
-  Card,
-  CardDeck,
-  //   Dropdown,
-  //   DropdownButton,
-} from "react-bootstrap";
+import { Card, CardDeck } from "react-bootstrap";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
 function Videos() {
   const options = ["Whiskey From Home Series", "Other Playlists"];
-  //   const defaultOption = options[0];
 
   const [defaultOption, setDefaultOption] = useState(options[0]);
-  const [showResults, setShowResults] = useState(true);
 
   var videosResult = (
     <CardDeck style={{ marginTop: 5 }}>
@@ -127,11 +113,6 @@ function Videos() {
             CompleteMe Love Webinar: Align your Mind, Body and Soul
           </Card.Title>
         </a>
-        {/* <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text> */}
-        {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
       <Card.Footer>
         <span className="text-muted">Recorded Live on 13th June 2020</span>
@@ -142,30 +123,18 @@ function Videos() {
   const handleChange = (e) => {
     setDefaultOption(e.value);
     console.log(e.value);
-    // if (e.value == options[1]) {
-    //   return videosResult == false;
-    // }
-  };
-
-  //   const onClick = () => setShowResults(false);
-  const onClick = () => {
-    videosResult = <h2>Hello</h2>;
   };
 
   return (
     <div>
-      {/* <h2>Videos</h2> */}
       <Dropdown
-        // style={{ borderWidth: 10 }}
-        // style={{ marginBottom: 20 }}
         options={options}
         onChange={handleChange}
-        // onClick={onClick}
         value={defaultOption}
         placeholder="Select an option"
       />
       <br />
-      {/* <Image src="holder.js/171x180" roundedCircle /> */}
+
       {defaultOption == options[0] ? videosResult : otherVideos}
     </div>
   );

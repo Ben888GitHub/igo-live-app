@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  Jumbotron,
-  Container,
-  Image,
-  Row,
-  Col,
-  Carousel,
-  Button,
-  Card,
-  CardDeck,
-  //   Dropdown,
-  //   DropdownButton,
-} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
@@ -67,7 +55,6 @@ function SideContent() {
       <br />
       <Card
         style={{
-          // marginTop: 20,
           borderStyle: "hidden",
           boxShadow: "0.5px 1px 7px #888888",
           borderRadius: 10,
@@ -97,12 +84,6 @@ function SideContent() {
           >
             <Card.Title>Sales Enquiries</Card.Title>
           </a>
-
-          {/* <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button> */}
         </Card.Body>
       </Card>
       <br />
@@ -140,8 +121,3 @@ function SideContent() {
 }
 
 export default SideContent;
-
-// style={{ fontWeight: "400" }}
-// style={{ fontWeight: "400" }}
-// style={{ fontWeight: "400" }}
-// style={{ fontWeight: "400" }}
