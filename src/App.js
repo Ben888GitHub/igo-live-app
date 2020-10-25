@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Jumbotron, Container, Image } from "react-bootstrap";
+import "./App.css";
+import ReactPlayer from "react-player";
+import { Player } from "video-react";
+import Iframe from "react-iframe";
+// import 'node_modules/react-modal-video/scss/modal-video.scss';
+import ModalVideo from "react-modal-video";
+import Video from "react-video-renderer";
+import NavigationBar from "./components/NavigationBar";
+import GridLayout from "./components/GridLayout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <NavigationBar />
+      <br />
+      <GridLayout />
+      <br />
+      <div className="footer">
+        {/* <p>This is some content in sticky footer</p> */}
+        {/* <div className="footer_contents"> */}
+        <p
+          style={{
+            marginTop: 13,
+            color: "#f7f7f7",
+            textAlign: "center",
+            justifyContent: "center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Copyright © 2020, iGo Live. All Rights Reserved
+        </p>
+        {/* </div> */}
+      </div>
+      <ScrollToTop />
     </div>
   );
 }
